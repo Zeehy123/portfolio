@@ -1,7 +1,7 @@
 export default function ExperienceCard({ title, description, icon: Icon }) {
   return (
     <div
-      className="relative rounded-2xl p-5 bg-gradient-to-br from-[#211c3aff] to-[#2d2457ff] to-[#8674a7ff]
+      className="relative rounded-2xl p-5 bg-gradient-to-br from-[#211c3aff] to-[#2d2457ff] 
   border border-muted/90 boder-top-white/60 transition-all duration-300 erase-out hover:-transition-y-2 hover:shadow-[0_20px_60px_-15px_rgba(168,85,247,1.00)]
   hover:border-primary/40"
     >

@@ -1,9 +1,27 @@
+const { transform } = require("next/dist/build/swc");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false,
   theme: {
     extend: {
+      animation: {
+        orbitSlow: "orbit 40s linear infinite",
+        orbitMedium: "orbit 30s linear infinite",
+        orbitFast: "orbit 20s linear infinite",
+        float: "float 40s ease-in-out infinite",
+      },
+      keyframes: {
+        orbit: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        float: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+      },
       backgroundImage: {
         "hero-gradient":
           "radial-gradient(60% 60% at 10% 20%,rgba(130, 88, 202, 0.35),rgba(20, 35, 51, 0.95))",
@@ -26,11 +44,6 @@ module.exports = {
         body: ["Inter", "sans-serif"],
         mini: ["poppins-medium", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
-      },
-      gradientColorStops: {
-        primary: "#3e354eff",
-        next: "#2d2457ff",
-        nextb: "#8674a7ff",
       },
     },
   },
