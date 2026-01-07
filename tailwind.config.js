@@ -1,5 +1,3 @@
-const { transform } = require("next/dist/build/swc");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
