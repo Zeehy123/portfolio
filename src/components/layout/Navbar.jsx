@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border backdrop-blur">
@@ -8,8 +9,12 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="flex gap-8 font-mono text-lg text-white">
-          <a className="hover:text-primary transition">Home</a>
-          <a className="hover:text-primary transition">About</a>
+          <Link to="/" className="hover:text-primary transition">
+            Home
+          </Link>
+          <Link to="/about" className="hover:text-primary transition">
+            About
+          </Link>
           <a className="hover:text-primary transition">Explore</a>
         </div>
       </div>

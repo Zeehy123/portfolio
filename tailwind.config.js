@@ -22,7 +22,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-gradient":
-          "radial-gradient(60% 60% at 10% 20%,rgba(130, 88, 202, 0.35),rgba(20, 35, 51, 0.95))",
+          "radial-gradient(60% 30% at 5% 5%,rgba(161, 114, 241, 0.35),rgba(20, 35, 51, 0.95))",
       },
       colors: {
         background: "#0A0E14",
