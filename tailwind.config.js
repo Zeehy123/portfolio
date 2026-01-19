@@ -22,7 +22,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-gradient":
-          "radial-gradient(60% 30% at 5% 5%,rgba(161, 114, 241, 0.35),rgba(20, 35, 51, 0.95))",
+          "radial-gradient(60% 10% at 5% 5%,rgba(214, 199, 240, 0.35),rgba(49, 73, 99, 0.95))",
       },
       colors: {
         background: "#0A0E14",
@@ -31,6 +31,7 @@ module.exports = {
         text: "#EDE9FE",
         muted: "#A78BFA",
         primary: "#7C3AED",
+        free: "#474781",
         primarySoft: "rgba(99, 102, 241, 0.1)",
       },
       boxShadow: {

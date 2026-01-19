@@ -15,7 +15,9 @@ export default function Navbar() {
           <Link to="/about" className="hover:text-primary transition">
             About
           </Link>
-          <a className="hover:text-primary transition">Explore</a>
+          <Link to="/explore" className="hover:text-primary transition">
+            Explore
+          </Link>
         </div>
       </div>
     </nav>
