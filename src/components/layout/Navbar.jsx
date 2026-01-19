@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/Plogo3.png";
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border backdrop-blur">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="font-mono text-sm tacking-wide text-text">
-          zainab.dev
-        </span>
-
+        {/* <span className="font-mono text-sm tacking-wide text-text">
+          dev
+        </span> */}
+        <img src={logo} alt="" className="relative w-20 rounded-full z-10" />
         {/* Links */}
         <div className="flex gap-8 font-mono text-lg text-white">
           <Link to="/" className="hover:text-primary transition">
