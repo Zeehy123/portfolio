@@ -8,25 +8,31 @@ export default function Hero() {
     "Fullstack Developer",
     "React Native Developer",
   ];
+
   const typedText = useTypeWriter(roles);
+
   return (
-    <section className="pt-14">
-      <div className="max-w-6xl mx-auto px-16 flex items-center gap-10">
-        {/* Image */}
-        <div className="relative shrink-0">
-          {/* Glow */}
-          <div className="absolute -top-10 -left-10 w-84 h-84 bg-muted/30 rounded-full blur-3xl" />
+    <section className="pt-20">
+      {/* ================= TOP HERO ================= */}
+      <div className="max-w-6xl mx-auto px-6 lg:px-16 flex flex-col md:flex-row items-center gap-12">
+        {/* IMAGE */}
+        <div className="relative shrink-0 flex justify-center">
+          <div className="absolute -top-10 -left-10 w-72 h-72 bg-muted/30 rounded-full blur-3xl hidden md:block" />
 
           <img
             src={zainab}
-            alt="zainab profile"
-            className="relative w-64 rounded-full z-10"
+            alt="Yusuf profile"
+            className="relative w-48 md:w-64 rounded-full z-10"
           />
         </div>
-        <div className="max-w-xl relative">
+
+        {/* TEXT */}
+        <div className="max-w-xl relative text-center md:text-left">
+          {/* Greeting */}
           <div className="relative inline-block mb-4">
+            {/* Arrow SVG (desktop only) */}
             <svg
-              className="absolute top-3.5 right-[150px] w-28 text-primary"
+              className="hidden md:block absolute top-4 right-[140px] w-28 text-primary"
               viewBox="0 0 200 100"
               fill="none"
             >
@@ -43,24 +49,26 @@ export default function Hero() {
                 strokeLinecap="round"
               />
             </svg>
-            <p className="font-mono mb-4 text-md">
-              Hi, I’m {""}
-              <span className="font-mini font-bold">Yusuf Zainab</span>
+
+            <p className="font-mono text-md">
+              Hi, I’m <span className="font-mini font-bold">Yusuf Zainab</span>
             </p>
           </div>
 
-          <h1 className="font-heading text-6xl font-bold leading-tight">
-            <span className="block text-3xl font-normal">
+          {/* Headline */}
+          <h1 className="font-heading font-bold leading-tight text-[clamp(2.2rem,5vw,3.75rem)]">
+            <span className="block text-xl md:text-3xl font-normal">
               Frontend developer who
             </span>
 
-            <span className="block mt-2">
+            <span className="block mt-2 relative">
               Turns ideas into <br />
-              reliable{"  "}
-              <span className="text-primary">
+              reliable{" "}
+              <span className="text-primary relative inline-block">
                 software...
+                {/* Oval (desktop only) */}
                 <svg
-                  className="absolute top-[80px] right-[115px] w-60 h-60 scale-95 rotate-[-15deg]"
+                  className="hidden md:block absolute top-[70px] right-[90px] w-56 rotate-[-15deg]"
                   viewBox="0 0 200 80"
                   fill="none"
                 >
@@ -96,22 +104,25 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="px-16 mt-20 max-w-6xl mx-auto">
-        <h1 className="font-heading text-5xl font-bold">
-          I'm a {""}
-          <span className="">
+
+      {/* ================= SECOND HERO ================= */}
+      <div className="px-6 lg:px-16 mt-24 max-w-6xl mx-auto text-center md:text-left">
+        <h2 className="font-heading font-bold text-[clamp(2rem,4vw,3rem)]">
+          I'm a{" "}
+          <span className="text-primary">
             {typedText}
             <span className="animate-pulse">|</span>
           </span>
-        </h1>
-        <p className="mt-1 text-lg ">
+        </h2>
+
+        <p className="mt-2 text-lg">
           I build reliable, scalable, and user-focused software
         </p>
-        <p className="mt-16 max-w-2xl font-mini font-bold leading-relaxed">
-          {" "}
+
+        <p className="mt-10 max-w-2xl mx-auto md:mx-0 font-mini font-bold leading-relaxed">
           A developer focused on building clean, performant, and accessible
           applications. I care deeply about structure, clarity, and the small
-          details that turn good code into great products
+          details that turn good code into great products.
         </p>
       </div>
     </section>

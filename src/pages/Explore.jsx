@@ -5,6 +5,7 @@ import ProjectFilter from "../components/common/ProjectFilter";
 import ExploreGrid from "../sections/ExploreGrid";
 import ProjectModal from "../components/common/ProjectModal";
 import Navbar from "../components/layout/Navbar";
+import Contact from "../sections/Contact";
 
 export default function Explore() {
   const [filter, setFilter] = useState("All");
@@ -26,6 +27,7 @@ export default function Explore() {
         project={activeProject}
         onClose={() => setActiveProject(null)}
       />
+      <Contact />
     </main>
   );
 }

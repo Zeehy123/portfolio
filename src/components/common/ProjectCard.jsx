@@ -1,7 +1,7 @@
 export default function FeaturedProject({ project, reverse }) {
   return (
-    <div className="relative mx-auto max-w-6xl py-10">
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center">
+    <section className="relative mx-auto max-w-6xl py-20 px-4 sm:px-6">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
         {/* IMAGE */}
         <div
           className={`relative ${
@@ -12,38 +12,66 @@ export default function FeaturedProject({ project, reverse }) {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover scale-[1.02] blur-[0.5px]"
+              className="
+                w-full
+                h-[260px] sm:h-[320px] md:h-[400px]
+                lg:h-full
+                object-cover
+              "
             />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-primary/10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/30 to-primary/10" />
           </div>
         </div>
 
-        {/* TEXT CARD (ABSOLUTE OVER IMAGE) */}
+        {/* TEXT CONTENT */}
         <div
-          className={`absolute top-1/2 -translate-y-1/2 z-10
-          ${reverse ? "right-[45%]" : "left-[45%]"}
-          w-full max-w-xl`}
+          className={`
+            relative z-10
+            w-full max-w-lg mx-auto
+            lg:max-w-xl
+            lg:absolute lg:top-1/2 lg:-translate-y-1/2
+            ${reverse ? "lg:right-[45%]" : "lg:left-[45%]"}
+          `}
         >
-          <div className="relative ml-20">
-            <p className="text-xl text-primary mb-2">{project.tag}</p>
+          {/* TAG + TITLE */}
+          <div className="mb-6 text-center lg:text-left lg:ml-20">
+            <p className="text-xs uppercase tracking-widest text-primary mb-2">
+              {project.tag}
+            </p>
 
-            <h3 className="text-2xl font-semibold leading-tight mb-6">
+            <h3
+              className="
+                font-semibold
+                text-[1.6rem]
+                sm:text-2xl
+                leading-tight
+              "
+            >
               {project.title}
             </h3>
           </div>
 
-          {/* Glass Card */}
+          {/* DESCRIPTION CARD */}
           <div className="relative">
-            <div className="absolute inset-0 bg-white/10 blur-2xl rounded-2xl" />
+            <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-2xl" />
 
-            <div className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 text-md leading-relaxed shadow-xl">
+            <div
+              className="
+                relative
+                bg-white/10 backdrop-blur-2xl
+                border border-white/15
+                rounded-2xl
+                p-5 sm:p-6
+                text-sm sm:text-base
+                leading-relaxed
+                shadow-xl
+              "
+            >
               {project.description}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
