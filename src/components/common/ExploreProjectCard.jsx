@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 export default function ExploreProjectCard({ project, onOpen }) {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <div
       className="
@@ -10,8 +6,6 @@ export default function ExploreProjectCard({ project, onOpen }) {
         border border-white/10 bg-white/5 backdrop-blur-xl
         cursor-pointer transition hover:-translate-y-1
       "
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       onClick={() => onOpen(project)}
     >
       {/* MEDIA */}
@@ -22,7 +16,7 @@ export default function ExploreProjectCard({ project, onOpen }) {
           overflow-hidden
         "
       >
-        {/* Image (always visible on mobile) */}
+        {/* Image */}
         <img
           src={project.image}
           alt={project.title}
