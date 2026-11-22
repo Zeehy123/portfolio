@@ -97,4 +97,26 @@ export const exploreProjects = [
       ],
     },
   },
+  {
+    id: 5,
+    title: "PaydPay",
+    type: "Frontend",
+    category: "Payment Dashboard",
+    description:
+      "A payment dashboard that provides users with insights into their transaction history, spending patterns, and financial health.",
+    image: ,
+    video: "/assets/videos/cashcoach.mp4",
+    tech: ["React", "Charts", "State Management"],
+    details: {
+      problem:
+        "Users struggled to keep track of expenses and budgets across multiple financial tools and spreadsheets.",
+      solution:
+        "Designed and built a centralized dashboard with visual analytics to help users monitor spending patterns and financial goals.",
+      highlights: [
+        "Expense and budget tracking",
+        "Visual analytics and charts",
+        "Clean, intuitive dashboard UX",
+      ],
+    },
+  },
 ];

@@ -1,11 +1,21 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Explore from "./pages/Explore";
 
-function App() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+export default function App() {
   return (
-    <div className="min-h-screen bg-hero-gradient text-text">
+    <div className="min-h-screen">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -14,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

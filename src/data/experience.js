@@ -1,31 +1,50 @@
-import { GraduationCap, School, Boxes, Share2 } from "lucide-react";
 export const experience = [
   {
-    id: 1,
-    title: "Edusphere – Online Learning Platform",
-    icon: GraduationCap,
-    description:
-      "Built the complete frontend for Edusphere, an interactive online learning platform with robust course management features. Designed and implemented a seamless user experience using React.js, focusing on intuitive navigation, responsiveness, and dynamic UI components.",
+    role: "Software Developer",
+    org: "PrivacyToolBox Limited",
+    place: "Abuja",
+    period: "May 2026 – Nov 2026",
+    points: [
+      "Built frontend and backend features for privacy compliance platforms covering NDPA and GDPR.",
+      "Built role-based access control for four user types and led a team of six engineers.",
+    ],
   },
   {
-    id: 2,
-    title: "School E-Communication Platform",
-    icon: School,
-    description:
-      "Contributed to the development and improvement of a school e-communication platform used for sharing announcements and academic updates. Implemented UI updates using PHP, HTML, and CSS, improving usability and cross-device compatibility.",
+    role: "Freelance Web Developer",
+    org: "Independent",
+    place: "Remote",
+    period: "Feb 2025 – Nov 2026",
+    points: [
+      "Delivered Dereal Stay, Performance Rating Services and a Smart Memo Tracking System for schools.",
+      "Secured the memo system with two-factor authentication and automated its approval workflow.",
+    ],
   },
   {
-    id: 3,
-    title: "Inventory Management System",
-    icon: Boxes,
-    description:
-      "Developed an inventory management system to track products, stock levels, and transactions. Built responsive interfaces and implemented CRUD functionality with a focus on performance and data accuracy.",
+    role: "Software Developer and Trainer (NYSC)",
+    org: "Docuflow",
+    place: "Abuja",
+    period: "Aug 2025 – May 2026",
+    points: [
+      "Helped build DX Cloud for the Federal Ministry of Housing and Urban Development.",
+      "Trained ministry staff, including senior officers, on memo approval and task assignment workflows.",
+    ],
   },
   {
-    id: 4,
-    title: "File Sharing Application",
-    icon: Share2,
-    description:
-      "Built a file sharing application that allows users to upload, manage, and share files securely. Focused on clean interfaces, access control, and reliable backend logic.",
+    role: "Frontend Developer Intern",
+    org: "Maybeach Technologies",
+    place: "Abuja",
+    period: "Jul 2023 – Dec 2023",
+    points: [
+      "Built responsive client interfaces with HTML, CSS and React and delivered multiple projects on tight deadlines.",
+    ],
   },
+];
+
+export const skills = [
+  { group: "Languages", items: ["JavaScript", "Python", "PHP", "SQL"] },
+  {
+    group: "Frameworks and libraries",
+    items: ["React.js", "React Native", "Django", "Tailwind CSS", "Bootstrap"],
+  },
+  { group: "Databases", items: ["MySQL", "PostgreSQL"] },
 ];

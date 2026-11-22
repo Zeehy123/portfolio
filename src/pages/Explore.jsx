@@ -1,33 +1,34 @@
-import { useState } from "react";
-import { exploreProjects } from "../data/exploreProjects";
+import { useCallback, useState } from "react";
+import { projects } from "../data/projects";
 import ExploreHero from "../sections/ExploreHero";
 import ProjectFilter from "../components/common/ProjectFilter";
-import ExploreGrid from "../sections/ExploreGrid";
+import ProjectCard from "../components/common/ProjectCard";
 import ProjectModal from "../components/common/ProjectModal";
 import Navbar from "../components/layout/Navbar";
 import Contact from "../sections/Contact";
 
 export default function Explore() {
   const [filter, setFilter] = useState("All");
-  const [activeProject, setActiveProject] = useState(null);
+  const [active, setActive] = useState(null);
+  const close = useCallback(() => setActive(null), []);
 
-  const filteredProjects =
-    filter === "All"
-      ? exploreProjects
-      : exploreProjects.filter((p) => p.type === filter);
+  const shown =
+    filter === "All" ? projects : projects.filter((p) => p.type === filter);
 
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <ExploreHero />
-
-      <ProjectFilter active={filter} setActive={setFilter} />
-      <ExploreGrid projects={filteredProjects} onOpen={setActiveProject} />
-      <ProjectModal
-        project={activeProject}
-        onClose={() => setActiveProject(null)}
-      />
+      <main>
+        <ExploreHero />
+        <ProjectFilter active={filter} setActive={setFilter} />
+        <section className="mx-auto grid max-w-6xl gap-8 px-5 sm:grid-cols-2 sm:px-8">
+          {shown.map((p) => (
+            <ProjectCard key={p.id} project={p} onOpen={setActive} />
+          ))}
+        </section>
+        <ProjectModal project={active} onClose={close} />
+      </main>
       <Contact />
-    </main>
+    </>
   );
 }

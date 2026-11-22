@@ -1,18 +1,22 @@
 import Navbar from "../components/layout/Navbar";
 import Hero from "../sections/Hero";
-import WorkExperience from "../components/common/WorkExperience";
-import TechStack from "../components/common/TechStack";
-import Projects from "../sections/Project";
+import LiveWork from "../sections/LiveWork";
+import Showcase from "../sections/Showcase";
+import Experience from "../sections/Experience";
+import Skills from "../sections/Skills";
 import Contact from "../sections/Contact";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <WorkExperience />
-      <TechStack />
-      <Projects />
+      <main>
+        <Hero />
+        <LiveWork />
+        <Showcase />
+        <Experience />
+        <Skills />
+      </main>
       <Contact />
     </>
   );
